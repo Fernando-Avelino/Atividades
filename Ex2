@@ -1,0 +1,56 @@
+#include <iostream>
+
+using namespace std;
+int main(int argc, char** argv)
+{
+	
+	int matriz1 [3][3];
+	int matriz2 [3][3];
+	int lin;
+	int col;
+	int igual; 	
+	
+	cout << "\nDigite 9 numeros em sequencia para matriz(1) 3x3\n"; 
+	
+	for(lin=0; lin<3; lin++){
+		for(col=0;col<3;col++){
+			cin >> matriz1 [lin][col];
+		}
+	}		 
+    for(lin=0; lin<3; lin++){
+		for(col=0;col<3;col++){
+			cout << matriz1 [lin][col];    
+		}
+	    cout << "\n";
+	}
+	cout << "\nDigite 9 numeros em sequencia para matriz(2) 3x3\n"; 
+	
+	for(lin=0; lin<3; lin++){
+		for(col=0;col<3;col++){
+			cin >> matriz2 [lin][col];
+		}
+	}		 
+    for(lin=0; lin<3; lin++){
+		for(col=0;col<3;col++){
+			cout << matriz2 [lin][col];    
+		}
+	    cout << "\n";
+	}
+	//testa se matrizes são iguais
+    for (lin = 0; lin < 3; lin++) {
+        for (col = 0; col < 3; col++) {
+            if (matriz1[lin][col] != matriz2[lin][col]) {
+                igual = 0;
+            }
+        }
+    }
+ 
+    if (igual == 1) {
+        cout << "Matrizes iguais";
+    } 
+	else {
+        cout << "Matrizes diferentes";
+    }	
+		
+	return 0;
+}
