@@ -1,0 +1,52 @@
+Exercício 2
+
+#include <iostream>
+using namespace std;
+
+void qualquer(int p1, int &p2, int *p3)
+{
+   p1 *= 2;
+   p2 *= 2;
+   *p3 = p1 + p2;
+}
+
+int main(int argc, char** argv)
+{
+   int a;
+   int b;
+   int c;
+	
+   a = 2;
+   b = 3;
+   c = 0;
+	
+   qualquer(a, b, &c);
+	
+   cout << "Valor de a: " << a << endl;
+   cout << "Valor de b: " << b << endl;
+   cout << "Valor de c: " << c << endl;
+    
+   cout << endl;
+     
+   return 0;
+}  
+
+R: a=2, b=6 e c=10
+Para começar foi inclusa a biblioteca de entrada e saída iostream, e o namespace
+logo após declaramos a função void "qualquer" e seus parâmetros todos do tipo inteiro: p1, o endereço de p2 e o ponteiro de p3
+agora é feito o conteúdo da função void "qualquer" com os seguintes calculos:
+p1=p1*2, p2=p2*2, e por ultimo o endereço  de p3=p1+p2 
+Agora é criada a função principal do programa "int main":
+Dentro da função main começamos a declarar as variáveis int que serão utilizadas posteriormente, sao elas as variáveis a, b e c
+Embaixo dando continuidade à declaração de variáveis é feito a declaração de seus valores, sendo assim colocamos a=2, b=3 e c=0
+Agora faremos a chamada da função qualquer, descrita inicialmente e nela chamamos as variáveis a, b e o endereço de c;
+Os calculos são desenvolvidos da seguinte maneira:
+p1= a*2, ou seja p1=2*2 e tem como resultado 4 
+p2= b*2, ou seja p2=3*2 e tem como resultado 6
+E por fim o endereço de p3=p1+p2=10
+Logo após essa etapa são feitas as exibições de valores:
+Exibimos o valor inteiro de "a" que no caso é 2 e pulamos uma linha
+O próximo é o valor obtido pelo endereço de "p2" que é 6 e novamente pulamos uma linha
+E o valor do endereço do ponteiro de "p3" que é a soma de p1 com p2, totalizando no total o valor de 10 e pulamos mais uma linha
+Mais uma linha é pulada.
+Fim do programa.    
