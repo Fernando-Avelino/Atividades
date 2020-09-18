@@ -1,0 +1,55 @@
+Exercício 4 
+
+#include <iostream>
+using namespace std;
+
+void enche(int *p)
+{
+   for(int i=0; i<5; ++i)
+   {
+      *p = (i+1)*10;
+      p++;
+   }
+}
+
+int main(int argc, char** argv)
+{
+   int *v = new int[5];
+	
+   enche(v);
+	
+   for(int i=0; i<2; ++i)
+   {
+      ++v;
+   }
+	
+   cout << "Saida 1: " << *v << endl;
+   cout << "Saida 2: " << v[2] << endl;
+   cout << endl;
+    
+   return 0;
+}
+R: saída1=30, saída2=50
+
+inicialmente foi inclusa a biblioteca iostream, e o namespace.
+Logo após foi criada a função void "enche" e tem em seu conteúdo o ponteiro de p do tipo inteiro
+em seu escopo foi criada uma função "for" que funciona como uma atribuição definitiva, dentro da sua linha de função
+temos a variavel do tipo inteira "i", que tem por seu valor inicial igual a 0. Dando cotinuidade, definimos que se "i" for menor que 5,
+e será somada +1 logo no inicio do programa.
+Dentro da estrutura "for" temos o ponteiro de "p" que é igual a (i+1)*10
+e logo após é somada +1 na variável "p"
+Agora é criada a função principal "main", dentro dela definimos a variável inteira do ponteiro de "*v" que é igual ao novo inteiro que
+possui um tamanho de 5 ocorrencias.
+Agora é feita a chamada da função descrita anteriormente "enche" nomeada como v ou seja "enche(v)";
+Sendo assim inicia-se os calculos da função enche:
+
+No laço de repetição "for" o valor inteiro de i=1, dentro do escopo o ponteiro de p=(i+1)*10, como "i" vale 1, *p=(1+1)*10. sendo assim *p=(2*10)=20 e seu valor é agregado em p.
+Dando sequência no loop, iremos para o proximo for com seu valor de 1 de "i" do for anterior mais 1 de sua sequencia temos i=2 sendo assim *p=(2+1)*10= *p=3*10=30 e assim encerrando esse loop de "v"
+pois os proximos valores serao maiores que 2
+agora voltando ao for de "enche", "i" que antes era 1 agora fica com 2 em seu valor sendo assim i=2 que continua sendo menor que 5, e dando sequência so programa,
+*p=(2+1)*10, ou seja *p=3*10=30 e soma-se ao p anterior ficando com 20+30=50
+e assim por diante até dar as 5 rodadas de loop do "new int [5]"
+Após o loop são exibidas as saída1 e pula-se 1 linha.
+Exibi-se a saída2 e pula mais uma linha.
+E por fim pulamos uma linha.
+Fim do programa.
