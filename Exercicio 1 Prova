@@ -1,0 +1,44 @@
+Exercício 1
+#include <iostream>
+using namespace std;
+
+int main(int argc, char** argv)
+{
+   int a;
+   int *pa;
+   int b;
+   int *pb;
+   int c;
+   int *pc;
+	
+   pa = &a;
+   pb = &b;
+   pc = &c;
+	
+   a = 10;
+   b = *pa * 2;
+	
+   *pc = *pa + b;
+	
+   cout << "Valor de a: " << a << endl;
+   cout << "Valor de b: " << b << endl;
+   cout << "Valor de c: " << c << endl;
+    
+   cout << endl;
+    
+   return 0;
+}
+
+R: a=10, b=20,c=30
+
+Primeiro é feita a inclusão da biblioteca <iostream> para os comandos base de entrada e saida de dados. 
+Em seguida indicamos o namespace padrão, que indica nosso espaçõ de trabalho.
+Logo são feitas as declarações de variáveis que irão retornar uma variável inteira"int" a,b,c e declarados os ponteiros *pa, *pb e *pc.
+Depois são descritas que a variável "pa" irá receber o endereço de a, respectivamente "pb" irá receber o endereço de b e "pc" receberá o endereço de c.
+seguindo, "a" é declarado com valor 10.
+Logo após "b" tem como resultado o ponteiro "*pa", que por sua vez "pa" é declarado como igual ao endereço de "a", e o endereço de "a" tem valor 10, esse valor 10 é multiplicado por 2, sendo assim totalizando 20 como resultado de b.
+Próximo passo é feito processamento do ponteiro "*pc" que resulta no endereço "*pa" seguindo a lógica anterior o valor final do esndereço apontado por "pa" é 10, com a somatória de b que como calculado ente tem em seu valor 20, feito a soma (10+20), assim "*pc" vale 30
+Logo após é feita a exibição dos valores da seguinte forma:
+É feita a exibição do valor "a", pulamos uma linha e na sequência, exibimos o valor de "b" e pulamos uma linha, e por ultimo a exibição de "c" e pulamos mais uma linha.
+Mais uma linha é pulada.
+E fim do progama.
