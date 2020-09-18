@@ -1,0 +1,57 @@
+Exercício 3
+
+#include <iostream>
+using namespace std;
+
+void qualquer(int p1, int *p2, int &p3)
+{
+   p3 = p1 + *p2;
+   p1 *= 2;
+   *p2 *= 2;
+}
+
+int main(int argc, char** argv)
+{
+   int a;
+   int b;
+   int c;
+	
+   a = 2;
+   b = 3;
+   c = 0;
+	
+   qualquer(a, &b, c);
+	
+   cout << "Valor de a: " << a << endl;
+   cout << "Valor de b: " << b << endl;
+   cout << "Valor de b: " << c << endl;
+    
+   cout << endl;
+    
+   return 0;
+}
+
+R: a=2, b=6, c=5
+
+Para começar incluímos a biblioteca "iostream" para os comandos I/O de dados. 
+Depois indicamos o namespace padrão, que indica nosso espaço de trabalho.
+Declaramos a função void "qualquer" com seus parâmetros do tipo inteiro, são eles: "p1", o ponteiro de "p2" e o endereço de "p3"
+No escopo de void "qualquer", descrevemos os calculos a serem executados a seguir:
+p3 = p1 + o ponteiro de p2;
+p1 =p1 * 2;
+E por fim o ponteiro de = ponteiro de p2 * 2;
+Na função principal "main" declaramos as variáveis:
+A variável inteira de "a", variável inteira de "b" e variável inteira de "c",
+Em seguida declaramos seus valores.Sendo a variável "a" com valor 2, "b" com valor 3 e "c" com valor 0,
+Agora chamamos a função "qualquer" e suas variáveis "a", o endereço de "b" e a variavel "c" por ultimo.
+
+Os calculos são desenvolvidos da seguinte maneira:
+p3 = p1 + *p2, ou seja p3 = 2 + endereço de p2 que é 3 então, p3=2+3 e tem como resultado 5 
+p1 *= 2, ou seja p1 = p1 * 2, sendo assim p1=2*2 e tem como resultado 4
+E por fim o ponteiro de *p2 *= 2, então *p2=*p2*2, sendo assim *p2=3*2 e tem como resultado 6
+Logo após essa etapa são feitas as exibições de valores:
+Exibimos o valor inteiro de "a" que no caso é 2 e pulamos uma linha
+O próximo é o valor obtido pelo endereço do ponteiro de "p2" que é 6 e novamente pulamos uma linha
+E o valor do endereço de "p3" que é a soma do inteiro de p1 com o ponteiro de p2 antes dos outros calculos serem executados, ficando assim com o valor final de 5 e pulamos mais uma linha
+Mais uma linha é pulada.
+Fim do programa.
